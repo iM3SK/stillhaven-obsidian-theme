@@ -2,6 +2,16 @@
 
 User-visible changes are recorded here by release version.
 
+<!-- Keep a Changelog repeats category headings across releases. -->
+<!-- markdownlint-disable MD024 -->
+
+## [1.2.3] - 2026-10-09
+
+### Fixed
+
+- Include the complete MIT and bundled-font OFL license notices in `theme.css`,
+  so they remain available when an installer downloads only the theme files.
+
 ## [1.2.2] - 2026-10-09
 
 ### Changed
@@ -27,5 +37,8 @@ User-visible changes are recorded here by release version.
 - Hide folder and file icons while renaming, including files with recognized
   extensions.
 
+<!-- markdownlint-enable MD024 -->
+
+[1.2.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/releases/tag/1.2.1

@@ -82,6 +82,9 @@ Stillhaven's theme code and documentation are licensed under the
 The bundled Geist and Geist Mono fonts remain under the SIL Open Font License
 in [OFL.txt](OFL.txt); the theme's MIT license does not replace their license.
 
+Both complete license notices are also included in `theme.css`, so they travel
+with the theme when an installer downloads only the CSS and manifest.
+
 ## Project files
 
 - [theme.css](theme.css) contains the styles and embedded font and icon assets.
