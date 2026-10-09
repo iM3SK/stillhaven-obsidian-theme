@@ -3,6 +3,9 @@
 A warm, focused theme for Obsidian, with dark and light color modes,
 embedded typography, and small details that make everyday notes easier to read.
 
+[![Release](https://img.shields.io/github/v/release/iM3SK/stillhaven-obsidian-theme)](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
+[![Obsidian 1.13.0+](https://img.shields.io/badge/Obsidian-1.13.0%2B-7C3AED)](manifest.json)
+
 [Download the latest release](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 · [Release notes](CHANGELOG.md)
 · [Report a bug](https://github.com/iM3SK/stillhaven-obsidian-theme/issues/new)
