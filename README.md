@@ -19,11 +19,12 @@ embedded typography, and small details that make everyday notes easier to read.
 
 ## Install manually
 
-Download these three release assets:
+Download these four release assets:
 
 - [theme.css](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest/download/theme.css)
 - [manifest.json](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest/download/manifest.json)
 - [OFL.txt](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest/download/OFL.txt)
+- [LICENSE](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest/download/LICENSE)
 
 1. Open your vault folder and find its Obsidian configuration folder
    (normally `.obsidian`).
@@ -72,13 +73,20 @@ behavior remain managed by Obsidian.
 Reading view, Live Preview, command palette, search, and table scrolling were
 checked on Windows with Obsidian 1.14.4. The sample note still awaits a visual
 review. The minimum declared version, mobile layouts, Canvas, and Bases have not
-been separately verified. Community Themes submission is still pending and
-requires a license for the theme itself; `OFL.txt` covers the bundled fonts.
+been separately verified. Community Themes submission is still pending.
+
+## License
+
+Stillhaven's theme code and documentation are licensed under the
+[MIT License](LICENSE), copyright (c) 2026 iM3SK.
+The bundled Geist and Geist Mono fonts remain under the SIL Open Font License
+in [OFL.txt](OFL.txt); the theme's MIT license does not replace their license.
 
 ## Project files
 
 - [theme.css](theme.css) contains the styles and embedded font and icon assets.
 - [manifest.json](manifest.json) contains the theme name, version, and author.
+- [LICENSE](LICENSE) contains the MIT license for the theme code and documentation.
 - [OFL.txt](OFL.txt) contains the existing license for the bundled fonts.
 - [Showcase.md](Showcase.md) contains the sample note.
 - [CHANGELOG.md](CHANGELOG.md) contains release notes.
