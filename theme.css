@@ -215,13 +215,13 @@ body {
   --checklist-done-decoration: line-through;
   --blockquote-border-thickness: 3px;
   --blockquote-font-style: normal;
-  --callout-border-width: 1px;
+  --callout-border-width: 0px;
   --callout-border-opacity: 0.35;
   --callout-padding: 14px 16px;
   --callout-radius: 8px;
   --callout-title-size: 0.95em;
   --callout-title-weight: 600;
-  --callout-content-padding: 8px 0 0;
+  --callout-content-padding: 10px 0 0;
 }
 
 .theme-dark {
@@ -684,9 +684,32 @@ body {
   background-color: var(--color-red);
 }
 
+/* An overlay marker preserves file alignment and the native focus ring. */
+.nav-file-title.is-active:not(.is-being-renamed)::after {
+  content: "";
+  position: absolute;
+  inset-block: 3px;
+  inset-inline-start: 0;
+  width: 3px;
+  border-radius: 999px;
+  background-color: var(--stillhaven-accent);
+  pointer-events: none;
+}
+
+.nav-file-title.is-active .nav-file-title-content::before {
+  background-color: var(--text-accent);
+}
+
 .nav-file-title.is-being-renamed .nav-file-title-content::before,
 .nav-folder:not(.mod-root) > .nav-folder-title.is-being-renamed .nav-folder-title-content::before {
   content: none;
+}
+
+/* Callouts keep their native title, icon and collapse controls. */
+.callout {
+  border-inline-start-width: 3px;
+  border-inline-start-color: color-mix(in srgb, var(--callout-color) 70%, transparent);
+  background-color: color-mix(in srgb, var(--callout-color) 7%, transparent);
 }
 
 .markdown-rendered blockquote {

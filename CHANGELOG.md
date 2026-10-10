@@ -5,6 +5,15 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [1.3.0] - 2026-10-10
+
+### Added
+
+- Give callout cards a soft tint, slim accent edge, and roomier title and body
+  spacing while retaining Obsidian's native collapse behavior.
+- Mark the active file with a slim teal edge and accented file icon without
+  shifting the file list, and hide the marker while renaming.
+
 ## [1.2.3] - 2026-10-09
 
 ### Fixed
@@ -39,6 +48,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.3.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.3...1.3.0
 [1.2.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/releases/tag/1.2.1

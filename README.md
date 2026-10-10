@@ -17,6 +17,9 @@ embedded typography, and small details that make everyday notes easier to read.
 - Warm charcoal and cream palettes with a muted teal accent.
 - Bundled Geist and Geist Mono fonts, including italic faces.
 - Folder and file icons built into the theme, hidden while renaming.
+- Softly tinted callout cards with a slim accent edge and roomier content.
+- A slim teal marker and accented icon identify the active file without shifting
+  the file list.
 - Readable prose with extra room for code blocks and tables.
 - Visible keyboard focus and clear search and command selections.
 
@@ -74,7 +77,9 @@ Stillhaven styles Obsidian's existing interface. Built-in controls and editing
 behavior remain managed by Obsidian.
 
 Reading view, Live Preview, command palette, search, and table scrolling were
-checked on Windows with Obsidian 1.14.4. The sample note still awaits a visual
+checked on Windows with Obsidian 1.14.4. The new callout and active-file styles
+were checked in browser fixtures against Obsidian 1.14.4 styles; a live Obsidian
+review of these additions remains pending. The sample note still awaits a visual
 review. The minimum declared version, mobile layouts, Canvas, and Bases have not
 been separately verified. Community Themes submission is still pending.
 
