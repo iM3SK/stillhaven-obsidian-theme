@@ -5,6 +5,13 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## Unreleased
+
+### Fixed
+
+- Hide the native folder disclosure arrow beside Stillhaven's folder icon in
+  Obsidian 1.14.4.
+
 ## [1.5.1] - 2026-10-10
 
 ### Fixed

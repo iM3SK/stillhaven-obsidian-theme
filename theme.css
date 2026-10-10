@@ -231,7 +231,6 @@ body {
   --stillhaven-surface: #282828;
   --stillhaven-ink: #ebdbb2;
   --stillhaven-accent: #458588;
-  --stillhaven-skill: #b16286;
   --stillhaven-removed: #cc241d;
   --color-base-00: #242424;
   --color-base-05: #262626;
@@ -415,7 +414,6 @@ body {
   --stillhaven-surface: #f7f2e6;
   --stillhaven-ink: #3c3831;
   --stillhaven-accent: #347276;
-  --stillhaven-skill: #8e4d72;
   --stillhaven-removed: #a63b32;
   --color-base-00: #f0eadd;
   --color-base-05: #f4eee2;
@@ -617,7 +615,7 @@ body {
   mask-image: var(--stillhaven-folder-icon-closed);
 }
 
-.nav-folder:not(.mod-root) > .nav-folder-title .nav-folder-collapse-indicator {
+.nav-folder:not(.mod-root) > .nav-folder-title > .collapse-icon {
   display: none;
 }
 
