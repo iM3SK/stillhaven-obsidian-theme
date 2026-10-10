@@ -109,9 +109,10 @@ Put images inside Stillhaven's custom `gallery` callout:
 
 Use your own image filenames. Consecutive image lines and images separated by
 blank quoted lines both work. Place descriptions before or after the callout;
-its content should contain only images. Reading View arranges them into columns
-and keeps each image's proportions. Narrow panes use a single column. Live
-Preview, Canvas, and print/PDF keep the regular image layout. No plugin is needed.
+its content should contain only images. In Reading View, images stay in source
+order, filling each row from left to right, and use one to four columns according
+to the gallery's available width. Their proportions are preserved. Live Preview,
+Canvas, and print/PDF keep the regular image layout. No plugin is needed.
 
 ## Feedback
 
@@ -143,6 +144,13 @@ markup.
 The 1.5.0 destructive-button fix was checked in the same kind of fixtures,
 including hover and keyboard focus. Graph color classes were checked in
 fixtures and their renderer inputs traced in Obsidian 1.14.4.
+
+The 1.5.1 gallery fix was checked in browser fixtures using Obsidian 1.14.4
+styles at pane widths covering one through four columns in both color modes.
+The fixtures preserved image order, proportions, and wrapping across paragraph
+breaks, with no horizontal overflow, and left Live Preview, Canvas, print-preview
+markup, and ordinary callouts unchanged. A live Obsidian check of this fix remains
+pending.
 
 A complete live review of the 1.4.0 additions and sample note remains pending.
 Graph interactions, the minimum declared version, mobile layouts, Canvas, and

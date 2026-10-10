@@ -5,6 +5,15 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [1.5.1] - 2026-10-10
+
+### Fixed
+
+- Replace the gallery's `display: contents` layout with a compatible Reading View
+  layout that keeps images in source order across one to four columns, including
+  galleries with blank quoted lines, while retaining regular Canvas and print
+  layouts.
+
 ## [1.5.0] - 2026-10-10
 
 ### Changed
@@ -78,6 +87,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.5.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.3...1.3.0

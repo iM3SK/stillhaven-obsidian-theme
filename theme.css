@@ -922,30 +922,61 @@ body :is(button, a[href], input, textarea, select, .dropdown, .combobox-button,
 
 @media screen {
   .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-    gap: 12px;
-    align-items: start;
+    display: block;
+    container: stillhaven-gallery / inline-size;
+    margin: -6px;
+    font-size: 0;
+    line-height: 0;
   }
 
   .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p {
-    display: contents;
+    --stillhaven-gallery-columns: 1;
+    display: inline;
+    margin: 0;
   }
 
   .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > br {
     display: none;
   }
 
-  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > .image-embed {
-    display: block;
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > :is(.image-embed, img) {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% / var(--stillhaven-gallery-columns) - 12px);
+    margin: 6px;
     min-width: 0;
+    vertical-align: top;
+    font-size: var(--font-text-size);
+    line-height: var(--line-height-normal);
+  }
+
+  @container stillhaven-gallery (min-width: 464px) {
+    .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p {
+      --stillhaven-gallery-columns: 2;
+    }
+  }
+
+  @container stillhaven-gallery (min-width: 696px) {
+    .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p {
+      --stillhaven-gallery-columns: 3;
+    }
+  }
+
+  @container stillhaven-gallery (min-width: 928px) {
+    .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p {
+      --stillhaven-gallery-columns: 4;
+    }
   }
 
   .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > img,
   .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > .image-embed > img {
-    display: block;
-    width: 100%;
     height: auto;
     border-radius: var(--radius-m);
+  }
+
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > .image-embed > img {
+    display: block;
+    width: 100%;
+    margin: 0;
   }
 }
