@@ -22,14 +22,21 @@ for writing, navigating, and connecting ideas.
 Cream text, a quiet active-file marker, softly tinted callouts, and distinct
 task states give longer notes a clear rhythm.
 
-![Stillhaven dark mode showing a callout, headings, outline, and custom task states](screenshots/showcase-dark.png)
+![Stillhaven dark mode showing a compact table and clearer inline code](screenshots/showcase-dark.png)
 
 ### Soft cream
 
 A warm paper palette with teal accents, readable code, and the same note
 structure in light mode.
 
-![Stillhaven light mode showing task states, a quotation, and a code block](screenshots/showcase-light.png)
+![Stillhaven light mode showing a compact rounded table and clearer inline code](screenshots/showcase-light.png)
+
+### Code, with room to read
+
+A compact toolbar keeps the copy button above the code. Neutral surfaces match
+the surrounding note, while inline code has a clearer background.
+
+![Stillhaven dark mode showing code blocks with compact copy toolbars](screenshots/code-dark.png)
 
 ## Ideas, connected
 
@@ -148,9 +155,10 @@ documents with markdownlint. The CSS checks also reject `display: contents` to
 prevent the gallery compatibility warning from returning. These static checks
 complement the visual and interaction checks below.
 
-The note and graph screenshots above are desktop captures supplied on
-10 October 2026. They show the palette and earlier appearance in both color
-modes, before the 1.6.0 table and code styling; they do not verify every interaction.
+The note screenshots are desktop captures supplied on 11 October 2026 and show
+the 1.6.0 table and code styling. The graph captures were supplied on
+10 October 2026. These images show rendered appearance; they do not verify
+every interaction.
 
 Earlier live checks covered Reading View, Live Preview, command palette,
 search, and table scrolling on Windows with Obsidian 1.14.4, before the 1.4.0
