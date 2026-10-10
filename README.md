@@ -4,7 +4,7 @@ A warmer space for your notes. Stillhaven brings warm charcoal, soft cream,
 and muted teal to Obsidian, with embedded typography and thoughtful details
 for writing, navigating, and connecting ideas.
 
-![Stillhaven cover with charcoal, cream paper forms, and teal graph accents](screenshot.png)
+![Stillhaven cover with charcoal, cream paper forms, and teal graph accents](https://raw.githubusercontent.com/iM3SK/stillhaven-obsidian-theme/6cd5602b356042cc2d8469fb29922ae5e6121654/screenshot.png)
 
 [![Release](https://img.shields.io/github/v/release/iM3SK/stillhaven-obsidian-theme)](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 [![Obsidian 1.13.0+](https://img.shields.io/badge/Obsidian-1.13.0%2B-7C3AED)](manifest.json)
