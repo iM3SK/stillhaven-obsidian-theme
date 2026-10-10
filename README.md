@@ -156,9 +156,9 @@ prevent the gallery compatibility warning from returning. These static checks
 complement the visual and interaction checks below.
 
 The note screenshots are desktop captures supplied on 11 October 2026 and show
-the 1.6.0 table and code styling. The graph captures were supplied on
-10 October 2026. These images show rendered appearance; they do not verify
-every interaction.
+the 1.6.0 table and code styling. The dark graph capture was supplied on
+11 October 2026, and the light graph capture on 10 October 2026. These images
+show rendered appearance; they do not verify every interaction.
 
 Earlier live checks covered Reading View, Live Preview, command palette,
 search, and table scrolling on Windows with Obsidian 1.14.4, before the 1.4.0
