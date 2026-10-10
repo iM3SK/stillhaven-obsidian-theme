@@ -142,53 +142,16 @@ occurs with them disabled and include that result.
 
 For an improvement suggestion, explain the note-taking task it would help.
 
-## Compatibility and checks
+## Compatibility
 
-Stillhaven styles Obsidian's existing interface. Built-in controls and editing
-behavior remain managed by Obsidian.
+Stillhaven styles Obsidian's native interface and controls. CSS snippets and
+community plugins can affect its appearance.
+
+Mobile layouts, Canvas, Bases, and the minimum declared Obsidian version have
+not been separately verified.
 
 [Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
-runs on pushes to `master`, on pull requests, and when started manually.
-It checks CSS with Stylelint, validates the theme manifest and embedded license
-notices, and checks the three Markdown
-documents with markdownlint. The CSS checks also reject `display: contents` to
-prevent the gallery compatibility warning from returning. These static checks
-complement the visual and interaction checks below.
-
-The note screenshots are desktop captures supplied on 11 October 2026 and show
-the 1.6.0 table and code styling. The graph captures were supplied on
-10 October 2026. These images show rendered appearance; they do not verify
-every interaction.
-
-Earlier live checks covered Reading View, Live Preview, command palette,
-search, and table scrolling on Windows with Obsidian 1.14.4, before the 1.4.0
-additions. Browser fixtures using Obsidian 1.14.4 styles checked callouts,
-active-file styling, Properties, task symbols, embeds, headings, and galleries
-in dark and light modes, with wide and narrow panes. They also checked checkbox
-focus, gallery paragraph breaks, and exclusions for Canvas and print-preview
-markup.
-
-The 1.5.0 destructive-button fix was checked in the same kind of fixtures,
-including hover and keyboard focus. Graph color classes were checked in
-fixtures and their renderer inputs traced in Obsidian 1.14.4.
-
-The 1.5.1 gallery fix was checked in browser fixtures using Obsidian 1.14.4
-styles at pane widths covering one through four columns in both color modes.
-The fixtures preserved image order, proportions, and wrapping across paragraph
-breaks, with no horizontal overflow, and left Live Preview, Canvas, print-preview
-markup, and ordinary callouts unchanged. A live Obsidian check of this fix remains
-pending.
-
-The 1.6.0 table and code styling was checked in browser fixtures using Obsidian
-1.14.4 styles in both color modes and wide and narrow panes. Checks covered
-table spacing and scrolling, the compact copy toolbar and keyboard focus, and
-preservation of the bundled fonts. Folder icon and disclosure-arrow styling was
-also checked against Obsidian 1.14.4 markup. A live Obsidian check of these
-changes remains pending.
-
-A complete live review of the 1.4.0 additions and sample note remains pending.
-Graph interactions, the minimum declared version, mobile layouts, Canvas, and
-Bases have not been separately verified.
+checks CSS, the theme manifest, bundled license notices, and Markdown.
 
 ## License
 
