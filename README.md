@@ -46,13 +46,23 @@ Your existing graph color groups remain available.
 | Detail | What it brings |
 | --- | --- |
 | Typography | Bundled Geist and Geist Mono, including italic faces; room for prose, code, and tables. |
+| Tables and code | Compact, rounded surfaces in neutral colors, clearer inline code, and a separate copy toolbar above rendered code blocks. |
 | Navigation | Built-in folder and file icons, a slim active-file marker, and clear search and command selections. Icons stay hidden while renaming. |
 | Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and softly tinted callouts with a slim accent edge. |
 | Tasks | Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview. |
 | Embedded context | Subtle inset note embeds with their source links and editing controls, plus optional image galleries in Reading View. |
 | Controls | Visible keyboard focus and readable destructive confirmation buttons in both color modes. |
 
-## Install manually
+## Install
+
+In Obsidian, open **Settings → Appearance → Themes → Manage**, search for
+**Stillhaven**, and select **Install and use**. The theme is also listed in the
+[Obsidian Community directory](https://community.obsidian.md/themes/stillhaven).
+
+Use **Check for updates** under Appearance to update an installed community
+theme when a new release is available.
+
+### Manual installation
 
 Download these four release assets:
 
@@ -72,8 +82,7 @@ The manifest requires Obsidian 1.13.0 or later. No community plugin or separate
 font installation is required.
 
 To update a manual installation, replace those files with the assets from the
-latest release and reload Obsidian. Stillhaven is not yet listed in Obsidian's
-Community Themes directory.
+latest release and reload Obsidian.
 
 ## Sample note
 
@@ -140,8 +149,8 @@ prevent the gallery compatibility warning from returning. These static checks
 complement the visual and interaction checks below.
 
 The note and graph screenshots above are desktop captures supplied on
-10 October 2026. They show the appearance in both color modes; they do not
-verify every interaction.
+10 October 2026. They show the palette and earlier appearance in both color
+modes, before the 1.6.0 table and code styling; they do not verify every interaction.
 
 Earlier live checks covered Reading View, Live Preview, command palette,
 search, and table scrolling on Windows with Obsidian 1.14.4, before the 1.4.0
@@ -161,6 +170,13 @@ The fixtures preserved image order, proportions, and wrapping across paragraph
 breaks, with no horizontal overflow, and left Live Preview, Canvas, print-preview
 markup, and ordinary callouts unchanged. A live Obsidian check of this fix remains
 pending.
+
+The 1.6.0 table and code styling was checked in browser fixtures using Obsidian
+1.14.4 styles in both color modes and wide and narrow panes. Checks covered
+table spacing and scrolling, the compact copy toolbar and keyboard focus, and
+preservation of the bundled fonts. Folder icon and disclosure-arrow styling was
+also checked against Obsidian 1.14.4 markup. A live Obsidian check of these
+changes remains pending.
 
 A complete live review of the 1.4.0 additions and sample note remains pending.
 Graph interactions, the minimum declared version, mobile layouts, Canvas, and

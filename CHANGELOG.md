@@ -5,7 +5,19 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
-## Unreleased
+## [1.6.0] - 2026-10-11
+
+### Added
+
+- A compact toolbar above rendered code blocks, keeping the copy button visible
+  and separate from the scrolling code.
+
+### Changed
+
+- Give tables and code blocks simple, rounded surfaces in the theme's neutral
+  colors, with compact spacing and clearer inline-code backgrounds.
+- Consolidate shared dark and light CSS while retaining the palettes and all
+  four bundled font faces.
 
 ### Fixed
 
@@ -94,6 +106,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.6.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.1...1.6.0
 [1.5.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.3.0...1.4.0
