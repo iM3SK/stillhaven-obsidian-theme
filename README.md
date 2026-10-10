@@ -25,6 +25,9 @@ embedded typography, and small details that make everyday notes easier to read.
 - Subtle inset note embeds that keep their source links and editing controls.
 - A thin rule under H2 and quieter H3 headings for scanning longer notes.
 - Optional image galleries using a `gallery` callout in Reading View.
+- Teal Graph view nodes, a warm focus highlight, and distinct tag and attachment
+  colors, with clearer connections and support for your existing color groups.
+- Readable destructive confirmation buttons in both color modes.
 - Readable prose with extra room for code blocks and tables.
 - Visible keyboard focus and clear search and command selections.
 
@@ -126,6 +129,12 @@ CLI was unavailable during this check, so a live Obsidian review of the 1.4.0
 additions and the complete sample note remains pending. The minimum declared
 version, mobile layouts, Canvas, and Bases have not been separately verified.
 Community Themes submission is still pending.
+
+The 1.5.0 destructive-button fix was checked in browser fixtures against Obsidian
+1.14.4 styles in both color modes, including hover and keyboard focus. The same
+fixtures checked the graph's native color classes; its renderer inputs were
+traced in Obsidian 1.14.4. A live visual review of the new graph palette remains
+pending.
 
 ## License
 

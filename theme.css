@@ -393,10 +393,12 @@ body {
   --callout-example: var(--color-purple);
   --callout-summary: var(--color-cyan);
   --callout-quote: var(--text-muted);
-  --graph-line: var(--background-modifier-border);
-  --graph-node: var(--text-muted);
-  --graph-node-focused: var(--stillhaven-accent);
-  --graph-node-tag: var(--stillhaven-skill);
+  --graph-line: #536760;
+  --graph-node: var(--text-accent);
+  --graph-node-focused: var(--color-yellow);
+  --graph-node-tag: var(--color-purple);
+  --graph-node-attachment: var(--color-orange);
+  --graph-node-unresolved: var(--text-muted);
   --graph-text: var(--text-normal);
   --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
@@ -575,10 +577,12 @@ body {
   --callout-example: var(--color-purple);
   --callout-summary: var(--color-cyan);
   --callout-quote: var(--text-muted);
-  --graph-line: var(--background-modifier-border);
-  --graph-node: var(--text-muted);
-  --graph-node-focused: var(--stillhaven-accent);
-  --graph-node-tag: var(--stillhaven-skill);
+  --graph-line: #aaa99b;
+  --graph-node: var(--text-accent);
+  --graph-node-focused: var(--color-yellow);
+  --graph-node-tag: var(--color-purple);
+  --graph-node-attachment: var(--color-orange);
+  --graph-node-unresolved: var(--text-muted);
   --graph-text: var(--text-normal);
   --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
@@ -718,6 +722,21 @@ body {
   border-radius: 0 8px 8px 0;
 }
 
+
+/* Error-tinted buttons need the surface's readable text, not the teal CTA ink. */
+button.mod-warning,
+button.mod-destructive.mod-cta {
+  --text-on-accent: var(--text-normal);
+}
+
+/* Obsidian reads these native color classes into its graph renderer. */
+.graph-view.color-fill-highlight {
+  color: var(--text-accent-hover);
+}
+
+.graph-view.color-line-highlight {
+  color: var(--text-accent-hover);
+}
 
 /* Keyboard focus stays visible without ringing the CodeMirror editing surface. */
 body :is(button, a[href], input, textarea, select, .dropdown, .combobox-button,

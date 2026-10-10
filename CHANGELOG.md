@@ -5,6 +5,19 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [1.5.0] - 2026-10-10
+
+### Changed
+
+- Give Graph view teal note nodes, a warm focused-node highlight, purple tags,
+  orange attachments, quieter unresolved links, and clearer connections.
+- Keep native graph interactions and custom color groups intact.
+
+### Fixed
+
+- Make destructive confirmation buttons readable on their tinted red backgrounds
+  in both color modes, including hover, while preserving native keyboard focus.
+
 ## [1.4.0] - 2026-10-10
 
 ### Added
@@ -65,6 +78,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.5.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.3...1.3.0
 [1.2.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.2...1.2.3
