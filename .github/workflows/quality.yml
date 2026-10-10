@@ -1,0 +1,113 @@
+name: Code quality
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+
+      - name: Install pinned checkers
+        run: >-
+          npm install --prefix "$RUNNER_TEMP/stillhaven-quality"
+          --ignore-scripts --no-save --no-package-lock --no-audit --no-fund
+          stylelint@17.14.1 markdownlint-cli2@0.23.3
+
+      - name: Validate theme manifest and bundled notices
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { readFileSync } from 'node:fs';
+
+          const manifest = JSON.parse(readFileSync('manifest.json', 'utf8'));
+          const version = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
+          assert.equal(manifest.name, 'Stillhaven', 'Unexpected theme name');
+          for (const field of ['version', 'minAppVersion']) {
+            assert.equal(typeof manifest[field], 'string', `${field} must be a string`);
+            assert.match(manifest[field], version, `${field} must use x.y.z`);
+          }
+          assert.equal(typeof manifest.author, 'string', 'Author must be a string');
+          assert.ok(manifest.author.trim(), 'Author must not be empty');
+          assert.equal(typeof manifest.authorUrl, 'string', 'Author URL must be a string');
+          assert.equal(new URL(manifest.authorUrl).protocol, 'https:', 'Author URL must use HTTPS');
+
+          const normalize = (text) => text.replace(/\r\n?/g, '\n').trim();
+          const css = normalize(readFileSync('theme.css', 'utf8'));
+          assert.ok(css.length > 0, 'Theme CSS must not be empty');
+          for (const file of ['LICENSE', 'OFL.txt']) {
+            const notice = normalize(readFileSync(file, 'utf8'));
+            assert.ok(notice.length > 0, `${file} must not be empty`);
+            assert.ok(css.includes(notice), `${file} notice is missing from theme.css`);
+          }
+          console.log('Theme manifest and both bundled notices passed.');
+          NODE
+
+      - name: Check CSS
+        run: |
+          node --input-type=module <<'NODE'
+          import { writeFileSync } from 'node:fs';
+          import { join } from 'node:path';
+
+          const config = {
+            rules: {
+              'at-rule-no-unknown': true,
+              'block-no-empty': true,
+              'color-no-invalid-hex': true,
+              'declaration-block-no-duplicate-custom-properties': true,
+              'declaration-block-no-duplicate-properties': [true, {
+                ignore: ['consecutive-duplicates-with-different-syntaxes'],
+              }],
+              'declaration-block-no-shorthand-property-overrides': true,
+              'declaration-property-value-no-unknown': true,
+              'function-calc-no-unspaced-operator': true,
+              'function-no-unknown': true,
+              'media-query-no-invalid': true,
+              'property-no-unknown': true,
+              'selector-no-invalid': true,
+              'selector-pseudo-class-no-unknown': true,
+              'selector-pseudo-element-no-unknown': true,
+              'syntax-string-no-invalid': true,
+              'declaration-property-value-disallowed-list': {
+                display: ['/\\bcontents\\b/i'],
+              },
+            },
+          };
+          writeFileSync(join(process.env.RUNNER_TEMP, 'stillhaven-stylelint.json'), JSON.stringify(config));
+          NODE
+          node "$RUNNER_TEMP/stillhaven-quality/node_modules/stylelint/bin/stylelint.mjs" \
+            --config "$RUNNER_TEMP/stillhaven-stylelint.json" --max-warnings 0 theme.css
+
+      - name: Check Markdown
+        run: |
+          node --input-type=module <<'NODE'
+          import { writeFileSync } from 'node:fs';
+          import { join } from 'node:path';
+
+          const config = {
+            config: { MD013: { tables: false, code_blocks: false } },
+          };
+          writeFileSync(join(process.env.RUNNER_TEMP, 'stillhaven-markdownlint.json'), JSON.stringify(config));
+          NODE
+          node "$RUNNER_TEMP/stillhaven-quality/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs" \
+            --config "$RUNNER_TEMP/stillhaven-markdownlint.json" README.md CHANGELOG.md Showcase.md

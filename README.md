@@ -8,6 +8,8 @@ for writing, navigating, and connecting ideas.
 
 [![Release](https://img.shields.io/github/v/release/iM3SK/stillhaven-obsidian-theme)](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 [![Obsidian 1.13.0+](https://img.shields.io/badge/Obsidian-1.13.0%2B-7C3AED)](manifest.json)
+[![Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml/badge.svg?branch=master&event=push)](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
+[![MIT License](https://img.shields.io/github/license/iM3SK/stillhaven-obsidian-theme)](LICENSE)
 
 [Download the latest release](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 · [Release notes](CHANGELOG.md)
@@ -128,6 +130,14 @@ For an improvement suggestion, explain the note-taking task it would help.
 
 Stillhaven styles Obsidian's existing interface. Built-in controls and editing
 behavior remain managed by Obsidian.
+
+[Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
+runs on pushes to `master`, on pull requests, and when started manually.
+It checks CSS with Stylelint, validates the theme manifest and embedded license
+notices, and checks the three Markdown
+documents with markdownlint. The CSS checks also reject `display: contents` to
+prevent the gallery compatibility warning from returning. These static checks
+complement the visual and interaction checks below.
 
 The note and graph screenshots above are desktop captures supplied on
 10 October 2026. They show the appearance in both color modes; they do not
