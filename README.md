@@ -1,7 +1,10 @@
 # Stillhaven — Obsidian Theme
 
-A warm, focused theme for Obsidian, with dark and light color modes,
-embedded typography, and small details that make everyday notes easier to read.
+A warmer space for your notes. Stillhaven brings warm charcoal, soft cream,
+and muted teal to Obsidian, with embedded typography and thoughtful details
+for writing, navigating, and connecting ideas.
+
+![Stillhaven cover with charcoal, cream paper forms, and teal graph accents](screenshot.png)
 
 [![Release](https://img.shields.io/github/v/release/iM3SK/stillhaven-obsidian-theme)](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 [![Obsidian 1.13.0+](https://img.shields.io/badge/Obsidian-1.13.0%2B-7C3AED)](manifest.json)
@@ -10,26 +13,42 @@ embedded typography, and small details that make everyday notes easier to read.
 · [Release notes](CHANGELOG.md)
 · [Report a bug](https://github.com/iM3SK/stillhaven-obsidian-theme/issues/new)
 
-![Stillhaven dark mode with the file explorer and an open note](screenshot.png)
+## Dark and light
 
-## Appearance
+### Warm charcoal
 
-- Warm charcoal and cream palettes with a muted teal accent.
-- Bundled Geist and Geist Mono fonts, including italic faces.
-- Folder and file icons built into the theme, hidden while renaming.
-- Softly tinted callout cards with a slim accent edge and roomier content.
-- A slim teal marker and accented icon identify the active file without shifting
-  the file list.
-- A quiet Properties panel with distinct labels, values, and native focus states.
-- Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` tasks.
-- Subtle inset note embeds that keep their source links and editing controls.
-- A thin rule under H2 and quieter H3 headings for scanning longer notes.
-- Optional image galleries using a `gallery` callout in Reading View.
-- Teal Graph view nodes, a warm focus highlight, and distinct tag and attachment
-  colors, with clearer connections and support for your existing color groups.
-- Readable destructive confirmation buttons in both color modes.
-- Readable prose with extra room for code blocks and tables.
-- Visible keyboard focus and clear search and command selections.
+Cream text, a quiet active-file marker, softly tinted callouts, and distinct
+task states give longer notes a clear rhythm.
+
+![Stillhaven dark mode showing a callout, headings, outline, and custom task states](screenshots/showcase-dark.png)
+
+### Soft cream
+
+A warm paper palette with teal accents, readable code, and the same note
+structure in light mode.
+
+![Stillhaven light mode showing task states, a quotation, and a code block](screenshots/showcase-light.png)
+
+## Ideas, connected
+
+Teal note nodes and clearer connections give Graph view a place in the palette.
+Focused notes use a warm highlight; tags and attachments have distinct colors.
+Your existing graph color groups remain available.
+
+| Dark graph | Light graph |
+| --- | --- |
+| ![Stillhaven dark Graph view with teal nodes](screenshots/graph-dark.png) | ![Stillhaven light Graph view with teal nodes](screenshots/graph-light.png) |
+
+## Details for everyday notes
+
+| Detail | What it brings |
+| --- | --- |
+| Typography | Bundled Geist and Geist Mono, including italic faces; room for prose, code, and tables. |
+| Navigation | Built-in folder and file icons, a slim active-file marker, and clear search and command selections. Icons stay hidden while renaming. |
+| Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and softly tinted callouts with a slim accent edge. |
+| Tasks | Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview. |
+| Embedded context | Subtle inset note embeds with their source links and editing controls, plus optional image galleries in Reading View. |
+| Controls | Visible keyboard focus and readable destructive confirmation buttons in both color modes. |
 
 ## Install manually
 
@@ -58,8 +77,11 @@ Community Themes directory.
 
 [Showcase.md](Showcase.md) is a synthetic sample note for previewing Properties,
 task states, note embeds, image galleries, typography, tables, code, and callouts.
-Copy it and the `screenshots` folder into your vault to try the same content.
-Keep the sample's filename so its embedded Typography section resolves.
+Copy it into your vault together with
+[appearance-dark.png](screenshots/appearance-dark.png) and
+[appearance-light.png](screenshots/appearance-light.png), keeping both images
+inside a `screenshots` folder. Keep the sample's filename so its embedded
+Typography section resolves.
 
 ## Task states
 
@@ -91,16 +113,6 @@ its content should contain only images. Reading View arranges them into columns
 and keeps each image's proportions. Narrow panes use a single column. Live
 Preview, Canvas, and print/PDF keep the regular image layout. No plugin is needed.
 
-## Appearance settings
-
-### Dark mode
-
-![Stillhaven appearance settings in dark mode](screenshots/appearance-dark.png)
-
-### Light mode
-
-![Stillhaven appearance settings in light mode](screenshots/appearance-light.png)
-
 ## Feedback
 
 For layout or styling problems, [open an issue](https://github.com/iM3SK/stillhaven-obsidian-theme/issues/new).
@@ -111,30 +123,30 @@ occurs with them disabled and include that result.
 
 For an improvement suggestion, explain the note-taking task it would help.
 
-## Scope and verification
+## Compatibility and checks
 
 Stillhaven styles Obsidian's existing interface. Built-in controls and editing
 behavior remain managed by Obsidian.
 
-Reading view, Live Preview, command palette, search, and table scrolling were
-checked on Windows with Obsidian 1.14.4 before the 1.4.0 additions. The callout
-and active-file styles were checked in browser fixtures against Obsidian 1.14.4
-styles; a live Obsidian review of those additions remains pending.
+The note and graph screenshots above are desktop captures supplied on
+10 October 2026. They show the appearance in both color modes; they do not
+verify every interaction.
 
-Properties, task symbols, note embeds, heading hierarchy, and galleries were
-checked in browser fixtures using Obsidian 1.14.4 styles in dark and light modes,
-with wide and narrow panes. The fixtures also checked checkbox focus, gallery
-paragraph breaks, and exclusions for Canvas and print-preview markup. The native
-CLI was unavailable during this check, so a live Obsidian review of the 1.4.0
-additions and the complete sample note remains pending. The minimum declared
-version, mobile layouts, Canvas, and Bases have not been separately verified.
-Community Themes submission is still pending.
+Earlier live checks covered Reading View, Live Preview, command palette,
+search, and table scrolling on Windows with Obsidian 1.14.4, before the 1.4.0
+additions. Browser fixtures using Obsidian 1.14.4 styles checked callouts,
+active-file styling, Properties, task symbols, embeds, headings, and galleries
+in dark and light modes, with wide and narrow panes. They also checked checkbox
+focus, gallery paragraph breaks, and exclusions for Canvas and print-preview
+markup.
 
-The 1.5.0 destructive-button fix was checked in browser fixtures against Obsidian
-1.14.4 styles in both color modes, including hover and keyboard focus. The same
-fixtures checked the graph's native color classes; its renderer inputs were
-traced in Obsidian 1.14.4. A live visual review of the new graph palette remains
-pending.
+The 1.5.0 destructive-button fix was checked in the same kind of fixtures,
+including hover and keyboard focus. Graph color classes were checked in
+fixtures and their renderer inputs traced in Obsidian 1.14.4.
+
+A complete live review of the 1.4.0 additions and sample note remains pending.
+Graph interactions, the minimum declared version, mobile layouts, Canvas, and
+Bases have not been separately verified.
 
 ## License
 
