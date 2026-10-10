@@ -20,6 +20,11 @@ embedded typography, and small details that make everyday notes easier to read.
 - Softly tinted callout cards with a slim accent edge and roomier content.
 - A slim teal marker and accented icon identify the active file without shifting
   the file list.
+- A quiet Properties panel with distinct labels, values, and native focus states.
+- Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` tasks.
+- Subtle inset note embeds that keep their source links and editing controls.
+- A thin rule under H2 and quieter H3 headings for scanning longer notes.
+- Optional image galleries using a `gallery` callout in Reading View.
 - Readable prose with extra room for code blocks and tables.
 - Visible keyboard focus and clear search and command selections.
 
@@ -48,8 +53,40 @@ Community Themes directory.
 
 ## Sample note
 
-[Showcase.md](Showcase.md) is a synthetic sample note for previewing typography,
-tables, code, lists, and callouts. Copy it into your vault to try the same content.
+[Showcase.md](Showcase.md) is a synthetic sample note for previewing Properties,
+task states, note embeds, image galleries, typography, tables, code, and callouts.
+Copy it and the `screenshots` folder into your vault to try the same content.
+Keep the sample's filename so its embedded Typography section resolves.
+
+## Task states
+
+Write the marker directly in a Markdown task:
+
+```markdown
+- [/] Work in progress
+- [!] Important detail
+- [-] Canceled direction
+```
+
+These markers change the appearance in Reading View and Live Preview. Obsidian
+treats every non-empty marker as checked; clicking it clears the checkbox. To
+choose another custom state, edit the character between the brackets.
+
+## Optional image gallery
+
+Put images inside Stillhaven's custom `gallery` callout:
+
+```markdown
+> [!gallery] Reference images
+> ![[first-image.png]]
+> ![[second-image.png]]
+```
+
+Use your own image filenames. Consecutive image lines and images separated by
+blank quoted lines both work. Place descriptions before or after the callout;
+its content should contain only images. Reading View arranges them into columns
+and keeps each image's proportions. Narrow panes use a single column. Live
+Preview, Canvas, and print/PDF keep the regular image layout. No plugin is needed.
 
 ## Appearance settings
 
@@ -77,11 +114,18 @@ Stillhaven styles Obsidian's existing interface. Built-in controls and editing
 behavior remain managed by Obsidian.
 
 Reading view, Live Preview, command palette, search, and table scrolling were
-checked on Windows with Obsidian 1.14.4. The new callout and active-file styles
-were checked in browser fixtures against Obsidian 1.14.4 styles; a live Obsidian
-review of these additions remains pending. The sample note still awaits a visual
-review. The minimum declared version, mobile layouts, Canvas, and Bases have not
-been separately verified. Community Themes submission is still pending.
+checked on Windows with Obsidian 1.14.4 before the 1.4.0 additions. The callout
+and active-file styles were checked in browser fixtures against Obsidian 1.14.4
+styles; a live Obsidian review of those additions remains pending.
+
+Properties, task symbols, note embeds, heading hierarchy, and galleries were
+checked in browser fixtures using Obsidian 1.14.4 styles in dark and light modes,
+with wide and narrow panes. The fixtures also checked checkbox focus, gallery
+paragraph breaks, and exclusions for Canvas and print-preview markup. The native
+CLI was unavailable during this check, so a live Obsidian review of the 1.4.0
+additions and the complete sample note remains pending. The minimum declared
+version, mobile layouts, Canvas, and Bases have not been separately verified.
+Community Themes submission is still pending.
 
 ## License
 

@@ -1,3 +1,12 @@
+---
+tags:
+  - stillhaven
+  - showcase
+status: in-progress
+review-date: 2026-10-10
+reviewed: false
+---
+
 # Stillhaven
 
 A warm workspace for notes, code, and everyday ideas.
@@ -29,7 +38,9 @@ precise names. A [project overview](#project-overview) keeps the next step close
 ### Next actions
 
 - [x] Capture the main idea
-- [x] Gather the supporting details
+- [/] Refine the working draft
+- [!] Verify the release details
+- [-] Drop the superseded direction
 - [ ] Review the finished draft
 
 > A good note makes tomorrow's work easier to begin.
@@ -61,6 +72,21 @@ console.log(outline);
 | Project notes | `notes/projects/field-guide/` | Keep decisions and next actions together | Weekly <!-- markdown-check: nonbinding-resource --> |
 | Reading list | `notes/reference/reading-list.md` | Collect sources with a short explanation of their value | Monthly <!-- markdown-check: nonbinding-resource --> |
 | Working drafts | `notes/drafts/a-long-and-descriptive-document-name.md` | Give a longer path and a detailed description enough room | Before sharing <!-- markdown-check: nonbinding-resource --> |
+
+## Embedded context
+
+An excerpt from the Typography section keeps the source close to this plan.
+
+![[Showcase#Typography]]
+
+## Image gallery
+
+In Reading View, a `gallery` callout arranges its images in responsive columns.
+Keep descriptions outside the gallery block so its cells contain only images.
+
+> [!gallery] A warm workspace in two modes
+> ![Stillhaven appearance settings in dark mode](screenshots/appearance-dark.png)
+> ![Stillhaven appearance settings in light mode](screenshots/appearance-light.png)
 
 ## Callouts
 

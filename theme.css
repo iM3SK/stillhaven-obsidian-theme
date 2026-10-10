@@ -222,6 +222,7 @@ body {
   --callout-title-size: 0.95em;
   --callout-title-weight: 600;
   --callout-content-padding: 10px 0 0;
+  --h3-letter-spacing: 0.015em;
 }
 
 .theme-dark {
@@ -328,7 +329,7 @@ body {
   --scrollbar-active-thumb-bg: color-mix(in srgb, var(--stillhaven-ink) 30%, transparent);
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
-  --h3-color: var(--text-normal);
+  --h3-color: var(--text-muted);
   --h4-color: var(--text-normal);
   --h5-color: var(--text-muted);
   --h6-color: var(--text-muted);
@@ -510,7 +511,7 @@ body {
   --scrollbar-active-thumb-bg: color-mix(in srgb, var(--stillhaven-ink) 30%, transparent);
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
-  --h3-color: var(--text-normal);
+  --h3-color: var(--text-muted);
   --h4-color: var(--text-normal);
   --h5-color: var(--text-muted);
   --h6-color: var(--text-muted);
@@ -782,4 +783,150 @@ body :is(button, a[href], input, textarea, select, .dropdown, .combobox-button,
 .search-result-file-match.mobile-tap {
   color: var(--text-normal);
   background-color: var(--background-modifier-active-hover);
+}
+
+/* Properties use native controls, selection and focus outlines. */
+.markdown-preview-view .metadata-container,
+.markdown-source-view.mod-cm6 .metadata-container {
+  --metadata-background: color-mix(in srgb, var(--stillhaven-ink) 2%, transparent);
+  --metadata-border-width: 1px;
+  --metadata-border-radius: var(--radius-l);
+  --metadata-padding: 12px;
+  --metadata-gap: 4px;
+  --metadata-divider-width: 1px;
+  --metadata-divider-color: color-mix(in srgb, var(--stillhaven-ink) 8%, transparent);
+  --metadata-label-font: var(--font-monospace);
+  --metadata-label-font-size: 0.8em;
+  --metadata-label-font-weight: 500;
+  --metadata-label-text-color: var(--text-muted);
+  --metadata-label-width: clamp(6em, 25%, 9em);
+  --metadata-input-text-color: var(--text-normal);
+  --metadata-property-background-hover: var(--background-modifier-hover);
+}
+
+.markdown-preview-view .metadata-property-key-input,
+.markdown-source-view.mod-cm6 .metadata-property-key-input {
+  font-family: var(--metadata-label-font);
+}
+
+/* Section rules paint the editor line without changing its vertical geometry. */
+.markdown-rendered h2 {
+  padding-block-end: 0.35em;
+  border-block-end: 1px solid var(--background-modifier-border);
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-2 {
+  background-image: linear-gradient(var(--background-modifier-border), var(--background-modifier-border));
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.markdown-rendered h3 {
+  margin-block-start: 1.4em;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-3 {
+  padding-block-start: 1.1em;
+}
+
+/* Alternative task markers retain the input's native click and focus behavior. */
+.markdown-rendered li.task-list-item[data-task="/"] > .task-list-item-checkbox,
+.markdown-rendered li.task-list-item[data-task="/"] > p > .task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="/"] .task-list-item-checkbox[data-task="/"] {
+  --stillhaven-task-state-color: var(--text-accent);
+  --stillhaven-task-marker: "/";
+}
+
+.markdown-rendered li.task-list-item[data-task="!"] > .task-list-item-checkbox,
+.markdown-rendered li.task-list-item[data-task="!"] > p > .task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="!"] .task-list-item-checkbox[data-task="!"] {
+  --stillhaven-task-state-color: var(--text-warning);
+  --stillhaven-task-marker: "!";
+}
+
+.markdown-rendered li.task-list-item[data-task="-"] > .task-list-item-checkbox,
+.markdown-rendered li.task-list-item[data-task="-"] > p > .task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="-"] .task-list-item-checkbox[data-task="-"] {
+  --stillhaven-task-state-color: var(--text-faint);
+  --stillhaven-task-marker: "\2212";
+}
+
+.markdown-rendered li.task-list-item:is([data-task="/"], [data-task="!"], [data-task="-"]) > .task-list-item-checkbox,
+.markdown-rendered li.task-list-item:is([data-task="/"], [data-task="!"], [data-task="-"]) > p > .task-list-item-checkbox,
+.markdown-source-view.mod-cm6 .HyperMD-task-line:is([data-task="/"], [data-task="!"], [data-task="-"]) .task-list-item-checkbox:is([data-task="/"], [data-task="!"], [data-task="-"]) {
+  --checkbox-color: var(--stillhaven-task-state-color);
+  --checkbox-color-hover: color-mix(in srgb, var(--stillhaven-task-state-color) 82%, var(--text-normal));
+  --checkbox-marker-color: var(--background-primary);
+}
+
+.markdown-rendered li.task-list-item:is([data-task="/"], [data-task="!"], [data-task="-"]) > .task-list-item-checkbox:checked::after,
+.markdown-rendered li.task-list-item:is([data-task="/"], [data-task="!"], [data-task="-"]) > p > .task-list-item-checkbox:checked::after,
+.markdown-source-view.mod-cm6 .HyperMD-task-line:is([data-task="/"], [data-task="!"], [data-task="-"]) .task-list-item-checkbox:is([data-task="/"], [data-task="!"], [data-task="-"]):checked::after {
+  content: var(--stillhaven-task-marker);
+  -webkit-mask-image: none;
+  mask-image: none;
+  background-color: transparent;
+  color: var(--checkbox-marker-color);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-monospace);
+  font-size: calc(var(--checkbox-size) * 0.72);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Note embeds keep their source link, scroll container and Live Preview actions. */
+.markdown-preview-view .internal-embed.markdown-embed:not(.query-embed, .canvas-node-content, .canvas-node-content *),
+.markdown-source-view.mod-cm6 .cm-embed-block > .internal-embed.markdown-embed:not(.query-embed, .canvas-node-content, .canvas-node-content *) {
+  --embed-background: color-mix(in srgb, var(--stillhaven-accent) 4%, transparent);
+  --embed-border-start: 2px solid color-mix(in srgb, var(--stillhaven-accent) 55%, transparent);
+  --embed-border-end: none;
+  --embed-border-top: none;
+  --embed-border-bottom: none;
+  --embed-padding: 8px 16px;
+  border-radius: var(--radius-m);
+}
+
+.markdown-preview-view .internal-embed.markdown-embed:not(.query-embed, .canvas-node-content, .canvas-node-content *) > .markdown-embed-title,
+.markdown-source-view.mod-cm6 .cm-embed-block > .internal-embed.markdown-embed:not(.query-embed, .canvas-node-content, .canvas-node-content *) > .markdown-embed-title {
+  color: var(--text-muted);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-small);
+}
+
+/* An explicit gallery callout keeps normal paragraphs and editor widgets intact. */
+.callout[data-callout="gallery"] {
+  --callout-icon: lucide-images;
+}
+
+@media screen {
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 12px;
+    align-items: start;
+  }
+
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p {
+    display: contents;
+  }
+
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > br {
+    display: none;
+  }
+
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > .image-embed {
+    display: block;
+    min-width: 0;
+  }
+
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > img,
+  .markdown-preview-view .callout[data-callout="gallery"]:not(.canvas-node-content *, .print *) > .callout-content > p > .image-embed > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-m);
+  }
 }

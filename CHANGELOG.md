@@ -5,6 +5,23 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [1.4.0] - 2026-10-10
+
+### Added
+
+- A quiet Properties panel with clearer labels, values, and native focus states.
+- Distinct symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` tasks
+  in Reading View and Live Preview, retaining Obsidian's checkbox interaction.
+- An optional `gallery` callout for responsive image grids in Reading View,
+  preserving image proportions and the regular editor, Canvas, and print layout.
+
+### Changed
+
+- Give note embeds a subtle inset background and edge while retaining their source
+  links, scrolling, and Live Preview editing controls.
+- Add a thin section rule under H2 and distinguish H3 with quieter color and spacing.
+- Expand the sample note with Properties, custom tasks, a note excerpt, and a gallery.
+
 ## [1.3.0] - 2026-10-10
 
 ### Added
@@ -48,6 +65,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.4.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.3...1.3.0
 [1.2.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.2.1...1.2.2
