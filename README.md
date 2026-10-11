@@ -33,8 +33,9 @@ structure in light mode.
 
 ### Code, with room to read
 
-A compact toolbar keeps the copy button above the code. Neutral surfaces match
-the surrounding note, while inline code has a clearer background.
+In Reading View, a compact toolbar keeps the copy button above ordinary code
+blocks. When editing code, Obsidian's native controls remain available. Neutral
+surfaces match the surrounding note, while inline code has a clearer background.
 
 ![Stillhaven dark mode showing a code block with its copy toolbar and a compact table](screenshots/code-dark.png)
 
@@ -66,8 +67,9 @@ In Obsidian, open **Settings → Appearance → Themes → Manage**, search for
 **Stillhaven**, and select **Install and use**. The theme is also listed in the
 [Obsidian Community directory](https://community.obsidian.md/themes/stillhaven).
 
-Use **Check for updates** under Appearance to update an installed community
-theme when a new release is available.
+To update Stillhaven, open **Settings → Appearance → Themes → Manage**, select
+**Stillhaven**, and choose **Check for updates**. If an update is available,
+select **Update** to install it.
 
 ### Manual installation
 
