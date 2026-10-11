@@ -36,7 +36,7 @@ structure in light mode.
 A compact toolbar keeps the copy button above the code. Neutral surfaces match
 the surrounding note, while inline code has a clearer background.
 
-![Stillhaven dark mode showing code blocks with compact copy toolbars](screenshots/code-dark.png)
+![Stillhaven dark mode showing a code block with its copy toolbar and a compact table](screenshots/code-dark.png)
 
 ## Ideas, connected
 
