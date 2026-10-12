@@ -5,6 +5,13 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [2.0.1] - 2026-10-12
+
+### Fixed
+
+- Remove the obsolete bundled-font license notice and OFL.txt release asset;
+  link to the recommended fonts' official license.
+
 ## [2.0.0] - 2026-10-12
 
 ### Changed
@@ -134,6 +141,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[2.0.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.7.0...2.0.0
 [1.7.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.1...1.6.0

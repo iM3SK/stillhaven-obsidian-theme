@@ -34,11 +34,11 @@ jobs:
           --ignore-scripts --no-save --no-package-lock --no-audit --no-fund
           stylelint@17.14.1 markdownlint-cli2@0.23.3
 
-      - name: Validate theme manifest and bundled notices
+      - name: Validate theme manifest and MIT notice
         run: |
           node --input-type=module <<'NODE'
           import assert from 'node:assert/strict';
-          import { readFileSync } from 'node:fs';
+          import { existsSync, readFileSync } from 'node:fs';
 
           const manifest = JSON.parse(readFileSync('manifest.json', 'utf8'));
           const version = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/;
@@ -55,12 +55,14 @@ jobs:
           const normalize = (text) => text.replace(/\r\n?/g, '\n').trim();
           const css = normalize(readFileSync('theme.css', 'utf8'));
           assert.ok(css.length > 0, 'Theme CSS must not be empty');
-          for (const file of ['LICENSE', 'OFL.txt']) {
+          for (const file of ['LICENSE']) {
             const notice = normalize(readFileSync(file, 'utf8'));
             assert.ok(notice.length > 0, `${file} must not be empty`);
             assert.ok(css.includes(notice), `${file} notice is missing from theme.css`);
           }
-          console.log('Theme manifest and both bundled notices passed.');
+          assert.ok(!existsSync('OFL.txt'), 'Do not distribute a license for fonts that are not bundled');
+          assert.ok(!css.includes('SIL OPEN FONT LICENSE'), 'Remove the obsolete embedded-font notice');
+          console.log('Theme manifest, MIT notice and absence of obsolete font notices passed.');
           NODE
 
       - name: Check CSS
