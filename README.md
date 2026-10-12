@@ -1,7 +1,7 @@
 # Stillhaven — Obsidian Theme
 
 A warmer space for your notes. Stillhaven brings warm charcoal, soft cream,
-and muted teal to Obsidian, with embedded typography and thoughtful details
+and muted teal to Obsidian, with native typography and thoughtful details
 for writing, navigating, and connecting ideas.
 
 ![Stillhaven cover with charcoal, cream paper forms, and teal graph accents](https://raw.githubusercontent.com/iM3SK/stillhaven-obsidian-theme/6cd5602b356042cc2d8469fb29922ae5e6121654/screenshot.png)
@@ -22,7 +22,7 @@ for writing, navigating, and connecting ideas.
 Cream text, a quiet active-file marker, softly tinted callouts, and distinct
 task states give longer notes a clear rhythm.
 
-![Stillhaven dark mode showing a compact table and clearer inline code](screenshots/showcase-dark.png)
+![Stillhaven dark workspace showing native typography and the theme's charcoal palette](screenshots/appearance-dark.png)
 
 ### Soft cream
 
@@ -54,6 +54,10 @@ Your existing graph color groups remain available.
 Warm headers and summary rows keep tables close to the note's colors. Active
 cells use a clear teal outline, and cards use softly rounded panel surfaces.
 
+| Dark Bases | Light Bases |
+| --- | --- |
+| ![Stillhaven Bases table with warm headers and a summary row in dark mode](screenshots/bases-dark.png) | ![Stillhaven Bases table with warm headers and a summary row in light mode](screenshots/bases-light.png) |
+
 ## Canvas, with room to connect
 
 A warm dot grid, rounded cards, and quiet neutral connections bring Canvas
@@ -75,12 +79,12 @@ The command palette keeps selections visible in both color modes.
 
 | Detail | What it brings |
 | --- | --- |
-| Typography | Bundled Geist and Geist Mono, including italic faces; room for prose, code, and tables. |
+| Typography | Your Obsidian fonts, with comfortable spacing for prose, code, and tables; Geist and Geist Mono are optional recommendations. |
 | Tables and code | Compact, rounded surfaces in neutral colors, clearer inline code, and a separate copy toolbar above rendered code blocks. |
 | Navigation | Built-in folder and file icons, a slim active-file marker, and clear search and command selections. Icons stay hidden while renaming. |
-| Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and softly tinted callouts with a slim accent edge. |
-| Tasks | Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview. |
-| Embedded context | Subtle inset note embeds with their source links and editing controls, plus optional image galleries in Reading View. |
+| Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and compact, softly tinted callouts with a slim accent edge. |
+| Tasks | Centered vector symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview, independent of your font. |
+| Embedded context | Compact inset note embeds with their source links and editing controls, plus optional image galleries in Reading View. |
 | Bases | Warm table headers and summary rows, accented active cells, and rounded cards in the note's panel colors. |
 | Canvas | A warm backdrop and dot grid, clearer card labels, rounded cards, and neutral borders and connections that fit the palette. |
 | Controls | Visible keyboard focus and readable destructive confirmation buttons in both color modes. |
@@ -117,6 +121,42 @@ font installation is required.
 To update a manual installation, replace those files with the assets from the
 latest release and reload Obsidian.
 
+## Optional fonts
+
+Stillhaven uses Obsidian's default fonts and respects your font choices. No
+fonts are embedded in the theme, downloaded by it, or required to use it.
+
+If you prefer the typography bundled through 1.7.0, optionally install **Geist**
+and **Geist Mono** from [Vercel's official font page](https://vercel.com/font).
+Choose the desktop font files in the download and install them using your
+operating system's font installer. Reopen Obsidian if the fonts do not appear.
+
+In **Settings → Appearance**, set:
+
+- **Interface font** to `Geist`.
+- **Text font** to `Geist`.
+- **Monospace font** to `Geist Mono`.
+
+When upgrading from 1.7.0 or earlier, this optional setup restores the intended
+font families. Without it, text width and line wrapping can differ from
+screenshots of 1.7.0 and earlier, which used the previously embedded fonts.
+
+## Corners
+
+Stillhaven uses one corner token, `--stillhaven-radius`, with a default of
+`4px`. Tables, code blocks, callouts, cards, and native control corner variables
+all refer to it. To change the rounding, enable a CSS snippet such as:
+
+```css
+body {
+  --stillhaven-radius: 4px;
+}
+```
+
+Callouts and note embeds share compact padding, paragraph spacing, and line
+height. Embedded headings use smaller sizes to keep excerpts close to the
+surrounding note.
+
 ## Sample note
 
 [Showcase.md](Showcase.md) is a synthetic sample note for previewing Properties,
@@ -140,6 +180,8 @@ Write the marker directly in a Markdown task:
 These markers change the appearance in Reading View and Live Preview. Obsidian
 treats every non-empty marker as checked; clicking it clears the checkbox. To
 choose another custom state, edit the character between the brackets.
+Their vector symbols share the native checkmark's bounds and stay centered
+when you change fonts.
 
 ## Optional image gallery
 
@@ -179,9 +221,18 @@ cards, cell editor appearance, embedded Bases, Canvas selection, card movement,
 and zoom in dark and light modes. Cell values were kept unchanged. The app
 remained responsive during this check; long-term stability remains unverified.
 
-The Canvas and command-palette screenshots, plus the light Graph capture,
-were supplied from the live app on 12 October 2026. Screenshots show appearance;
-the interaction coverage above comes from a separate live check.
+Additional desktop checks covered native typography, compact callouts and note
+embeds, gallery layout, and all five task states in Reading View and Live Preview
+in both color modes. In dark Reading View, the code copy button and keyboard
+focus worked, and horizontal code scrolling kept the toolbar fixed. Ordinary,
+unlabelled, quoted, list, and callout code blocks were checked; plain preformatted
+text kept its layout and horizontal scrolling without a toolbar. The toolbar was
+also checked visually in light Reading View.
+
+The workspace, light note, dark code, Graph, Bases, Canvas, and command-palette
+screenshots show the 2.0.0 styles with native fonts. They were supplied from the
+live app on 12 October 2026. Screenshots show appearance; the interaction
+coverage above comes from separate live checks.
 
 [Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
 checks CSS, the theme manifest, bundled license notices, and Markdown.
@@ -190,18 +241,19 @@ checks CSS, the theme manifest, bundled license notices, and Markdown.
 
 Stillhaven's theme code and documentation are licensed under the
 [MIT License](LICENSE), copyright (c) 2026 iM3SK.
-The bundled Geist and Geist Mono fonts remain under the SIL Open Font License
-in [OFL.txt](OFL.txt); the theme's MIT license does not replace their license.
+Geist and Geist Mono, bundled through 1.7.0 and now recommended separately,
+remain under the SIL Open Font License in [OFL.txt](OFL.txt); the theme's MIT
+license does not replace their license.
 
 Both complete license notices are also included in `theme.css`, so they travel
 with the theme when an installer downloads only the CSS and manifest.
 
 ## Project files
 
-- [theme.css](theme.css) contains the styles and embedded font and icon assets.
+- [theme.css](theme.css) contains the styles and embedded icon assets.
 - [manifest.json](manifest.json) contains the theme name, version, and author.
 - [LICENSE](LICENSE) contains the MIT license for the theme code and documentation.
-- [OFL.txt](OFL.txt) contains the existing license for the bundled fonts.
+- [OFL.txt](OFL.txt) retains the existing license for the previously bundled fonts.
 - [Showcase.md](Showcase.md) contains the sample note.
 - [CHANGELOG.md](CHANGELOG.md) contains release notes.
 

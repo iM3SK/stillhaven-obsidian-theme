@@ -66,8 +66,33 @@ jobs:
       - name: Check CSS
         run: |
           node --input-type=module <<'NODE'
-          import { writeFileSync } from 'node:fs';
+          import assert from 'node:assert/strict';
+          import { readFileSync, writeFileSync } from 'node:fs';
+          import { createRequire } from 'node:module';
           import { join } from 'node:path';
+
+          const require = createRequire(join(process.env.RUNNER_TEMP, 'stillhaven-quality', 'package.json'));
+          const postcss = require('postcss');
+          const css = readFileSync('theme.css', 'utf8');
+          const root = postcss.parse(css);
+          const cornerTokens = [];
+          let cornerDeclarations = 0;
+          root.walkAtRules('font-face', () => {
+            assert.fail('Fonts must remain optional; do not embed font faces.');
+          });
+          root.walkDecls((declaration) => {
+            if (declaration.prop === '--stillhaven-radius') {
+              cornerTokens.push(declaration);
+              assert.match(declaration.value, /^\d+(?:\.\d+)?px$/, 'Corner token must be a pixel value');
+            } else if (declaration.prop.includes('radius') && !declaration.prop.startsWith('--blur-radius')) {
+              assert.equal(declaration.value, 'var(--stillhaven-radius)',
+                `${declaration.prop} must reference the shared corner token`);
+              cornerDeclarations += 1;
+            }
+          });
+          assert.equal(cornerTokens.length, 1, 'Declare exactly one corner token');
+          assert.ok(cornerDeclarations > 0, 'Corner token must have consumers');
+          console.log(`Optional fonts and ${cornerDeclarations} shared corner declarations passed.`);
 
           const config = {
             rules: {
@@ -86,6 +111,7 @@ jobs:
               'property-no-unknown': true,
               'selector-no-invalid': true,
               'selector-pseudo-class-no-unknown': true,
+              'selector-pseudo-class-disallowed-list': ['has'],
               'selector-pseudo-element-no-unknown': true,
               'syntax-string-no-invalid': true,
               'declaration-property-value-disallowed-list': {

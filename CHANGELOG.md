@@ -5,6 +5,25 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [2.0.0] - 2026-10-12
+
+### Changed
+
+- Use Obsidian's native fonts. Geist and Geist Mono are now optional; restoring
+  the previously bundled typography requires installing them separately.
+- Use one 4 px corner token across panels, cards, tables, and controls.
+- Make callouts and note embeds more compact, including their headings and
+  paragraph spacing.
+
+### Fixed
+
+- Keep the code copy toolbar separate from horizontal scrolling without `:has()`
+  selectors; preserve scrolling for plain preformatted text.
+- Remove empty embed-title spacing and apply the compact layout in both Reading
+  View and Live Preview.
+- Keep custom task markers centered and consistently sized using font-independent
+  vector symbols.
+
 ## [1.7.0] - 2026-10-12
 
 ### Added
@@ -115,6 +134,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[2.0.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.7.0...2.0.0
 [1.7.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.1...1.6.0
 [1.5.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.0...1.5.1
