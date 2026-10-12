@@ -341,6 +341,29 @@ body {
   --graph-node-attachment: var(--color-orange);
   --graph-node-unresolved: var(--text-muted);
   --graph-text: var(--text-normal);
+
+  /* Bases share the note's panel palette and keep native sizing and controls. */
+  --bases-table-header-weight: var(--font-semibold);
+  --bases-table-header-color: var(--text-normal);
+  --bases-table-header-background: var(--stillhaven-panel-header-background);
+  --bases-table-header-background-hover: var(--background-modifier-active-hover);
+  --bases-table-group-background: var(--stillhaven-panel-background);
+  --bases-table-summary-background: var(--stillhaven-panel-header-background);
+  --bases-table-summary-background-hover: var(--background-modifier-active-hover);
+  --bases-table-cell-background-active: var(--background-primary-alt);
+  --bases-table-cell-radius-active: var(--radius-s);
+  --bases-table-cell-radius-focus: var(--radius-s);
+  --bases-table-cell-shadow-active: 0 0 0 2px var(--text-accent);
+  --bases-table-cell-shadow-focus: 0 0 0 2px var(--text-accent);
+  --bases-cards-background: var(--stillhaven-panel-background);
+  --bases-cards-cover-background: var(--background-primary-alt);
+  --bases-cards-radius: var(--radius-xl);
+  --bases-cards-shadow-hover: 0 0 0 2px var(--text-accent);
+
+  /* Canvas labels and its dot grid follow the same warm, neutral palette. */
+  --canvas-background: var(--background-secondary);
+  --canvas-card-label-color: var(--text-muted);
+  --canvas-dot-pattern: color-mix(in srgb, var(--stillhaven-ink) 15%, transparent);
   --modal-background: var(--background-primary);
   --modal-border-color: var(--background-modifier-border-hover);
   --prompt-background: var(--background-primary);
@@ -615,6 +638,15 @@ button.mod-destructive.mod-cta {
 .graph-view.color-fill-highlight,
 .graph-view.color-line-highlight {
   color: var(--text-accent-hover);
+}
+
+/* Local color classes still own colored Canvas cards and connections. */
+.canvas-wrapper {
+  --canvas-color: var(--color-base-50);
+}
+
+.canvas-node-container {
+  border-radius: var(--radius-xl);
 }
 
 /* Keyboard focus stays visible without ringing the CodeMirror editing surface. */

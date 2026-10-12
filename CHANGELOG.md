@@ -5,6 +5,15 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [1.7.0] - 2026-10-12
+
+### Added
+
+- Warm table headers and summary rows, accented active cells, and rounded cards
+  for Bases.
+- A warm Canvas backdrop and dot grid, clearer card labels, rounded cards, and
+  neutral borders and connections that follow the theme palette.
+
 ## [1.6.0] - 2026-10-11
 
 ### Added
@@ -106,6 +115,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[1.7.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.1...1.6.0
 [1.5.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.4.0...1.5.0

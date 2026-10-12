@@ -49,6 +49,28 @@ Your existing graph color groups remain available.
 | --- | --- |
 | ![Stillhaven dark Graph view with teal nodes](screenshots/graph-dark.png) | ![Stillhaven light Graph view with teal nodes](screenshots/graph-light.png) |
 
+## Bases, in the same palette
+
+Warm headers and summary rows keep tables close to the note's colors. Active
+cells use a clear teal outline, and cards use softly rounded panel surfaces.
+
+## Canvas, with room to connect
+
+A warm dot grid, rounded cards, and quiet neutral connections bring Canvas
+into the palette. Your colored cards and connections keep their own colors.
+
+| Dark Canvas | Light Canvas |
+| --- | --- |
+| ![Stillhaven Canvas with a note and live Base in dark mode](screenshots/canvas-dark.png) | ![Stillhaven Canvas with a note and live Base in light mode](screenshots/canvas-light.png) |
+
+## Clear commands
+
+The command palette keeps selections visible in both color modes.
+
+| Dark command palette | Light command palette |
+| --- | --- |
+| ![Stillhaven command palette in dark mode](screenshots/commands-dark.png) | ![Stillhaven command palette in light mode](screenshots/commands-light.png) |
+
 ## Details for everyday notes
 
 | Detail | What it brings |
@@ -59,6 +81,8 @@ Your existing graph color groups remain available.
 | Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and softly tinted callouts with a slim accent edge. |
 | Tasks | Separate symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview. |
 | Embedded context | Subtle inset note embeds with their source links and editing controls, plus optional image galleries in Reading View. |
+| Bases | Warm table headers and summary rows, accented active cells, and rounded cards in the note's panel colors. |
+| Canvas | A warm backdrop and dot grid, clearer card labels, rounded cards, and neutral borders and connections that fit the palette. |
 | Controls | Visible keyboard focus and readable destructive confirmation buttons in both color modes. |
 
 ## Install
@@ -149,8 +173,15 @@ For an improvement suggestion, explain the note-taking task it would help.
 Stillhaven styles Obsidian's native interface and controls. CSS snippets and
 community plugins can affect its appearance.
 
-Mobile layouts, Canvas, Bases, and the minimum declared Obsidian version have
-not been separately verified.
+Mobile layouts and the minimum declared Obsidian version have not been
+separately verified. Desktop checks in Obsidian 1.14.4 covered Bases tables,
+cards, cell editor appearance, embedded Bases, Canvas selection, card movement,
+and zoom in dark and light modes. Cell values were kept unchanged. The app
+remained responsive during this check; long-term stability remains unverified.
+
+The Canvas and command-palette screenshots, plus the light Graph capture,
+were supplied from the live app on 12 October 2026. Screenshots show appearance;
+the interaction coverage above comes from a separate live check.
 
 [Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
 checks CSS, the theme manifest, bundled license notices, and Markdown.
