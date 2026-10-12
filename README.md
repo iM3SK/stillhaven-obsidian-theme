@@ -215,45 +215,27 @@ For an improvement suggestion, explain the note-taking task it would help.
 Stillhaven styles Obsidian's native interface and controls. CSS snippets and
 community plugins can affect its appearance.
 
-Mobile layouts and the minimum declared Obsidian version have not been
-separately verified. Desktop checks in Obsidian 1.14.4 covered Bases tables,
-cards, cell editor appearance, embedded Bases, Canvas selection, card movement,
-and zoom in dark and light modes. Cell values were kept unchanged. The app
-remained responsive during this check; long-term stability remains unverified.
-
-Additional desktop checks covered native typography, compact callouts and note
-embeds, gallery layout, and all five task states in Reading View and Live Preview
-in both color modes. In dark Reading View, the code copy button and keyboard
-focus worked, and horizontal code scrolling kept the toolbar fixed. Ordinary,
-unlabelled, quoted, list, and callout code blocks were checked; plain preformatted
-text kept its layout and horizontal scrolling without a toolbar. The toolbar was
-also checked visually in light Reading View.
-
-The workspace, light note, dark code, Graph, Bases, Canvas, and command-palette
-screenshots show the 2.0.0 styles with native fonts. They were supplied from the
-live app on 12 October 2026. Screenshots show appearance; the interaction
-coverage above comes from separate live checks.
+The theme requires Obsidian 1.13.0 or later. Its desktop appearance was checked
+in Obsidian 1.14.4. Mobile layouts and the minimum declared version have not
+been separately verified. Screenshots show Stillhaven 2.0.0 with native fonts.
 
 [Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
-checks CSS, the theme manifest, bundled license notices, and Markdown.
+checks CSS, the theme manifest, license notices, and Markdown.
 
 ## License
 
 Stillhaven's theme code and documentation are licensed under the
 [MIT License](LICENSE), copyright (c) 2026 iM3SK.
-Geist and Geist Mono, bundled through 1.7.0 and now recommended separately,
-remain under the SIL Open Font License in [OFL.txt](OFL.txt); the theme's MIT
-license does not replace their license.
-
-Both complete license notices are also included in `theme.css`, so they travel
-with the theme when an installer downloads only the CSS and manifest.
+The optional **Geist** and **Geist Mono** fonts are licensed separately under
+the [SIL Open Font License](OFL.txt). They are not bundled with Stillhaven 2.0.0;
+the theme's MIT license does not replace their license.
 
 ## Project files
 
 - [theme.css](theme.css) contains the styles and embedded icon assets.
 - [manifest.json](manifest.json) contains the theme name, version, and author.
 - [LICENSE](LICENSE) contains the MIT license for the theme code and documentation.
-- [OFL.txt](OFL.txt) retains the existing license for the previously bundled fonts.
+- [OFL.txt](OFL.txt) contains the license for the recommended Geist fonts.
 - [Showcase.md](Showcase.md) contains the sample note.
 - [CHANGELOG.md](CHANGELOG.md) contains release notes.
 
