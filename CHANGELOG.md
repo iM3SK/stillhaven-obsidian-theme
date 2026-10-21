@@ -5,6 +5,15 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [2.0.3] - 2026-10-21
+
+### Changed
+
+- Distinguish note titles and H1-H2 headings with muted teal, and H3-H6
+  headings with sage gray, using separate light and dark palettes.
+- Keep heading contrast above 5.8:1 against the default note background in
+  both color modes.
+
 ## [2.0.2] - 2026-10-20
 
 ### Fixed
@@ -148,6 +157,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[2.0.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/1.7.0...2.0.0

@@ -256,13 +256,13 @@ body.is-mobile.is-floating-nav {
   --scrollbar-bg: color-mix(in srgb, var(--stillhaven-ink) 12%, transparent);
   --scrollbar-thumb-bg: color-mix(in srgb, var(--stillhaven-ink) 20%, transparent);
   --scrollbar-active-thumb-bg: color-mix(in srgb, var(--stillhaven-ink) 30%, transparent);
-  --h1-color: var(--text-normal);
-  --h2-color: var(--text-normal);
-  --h3-color: var(--text-muted);
-  --h4-color: var(--text-normal);
-  --h5-color: var(--text-muted);
-  --h6-color: var(--text-muted);
-  --inline-title-color: var(--text-normal);
+  --h1-color: var(--stillhaven-heading);
+  --h2-color: var(--stillhaven-heading);
+  --h3-color: var(--stillhaven-heading-muted);
+  --h4-color: var(--stillhaven-heading-muted);
+  --h5-color: var(--stillhaven-heading-muted);
+  --h6-color: var(--stillhaven-heading-muted);
+  --inline-title-color: var(--stillhaven-heading);
   --bold-color: var(--text-normal);
   --link-color: var(--text-accent);
   --link-color-hover: var(--text-accent-hover);
@@ -357,6 +357,8 @@ body.is-mobile.is-floating-nav {
   color-scheme: dark;
 
   --stillhaven-surface: #282828;
+  --stillhaven-heading: #91b8b4;
+  --stillhaven-heading-muted: #a4b5ac;
   --stillhaven-ink: #ebdbb2;
   --stillhaven-accent: #458588;
   --stillhaven-removed: #cc241d;
@@ -424,6 +426,8 @@ body.is-mobile.is-floating-nav {
   color-scheme: light;
 
   --stillhaven-surface: #f7f2e6;
+  --stillhaven-heading: #2f6668;
+  --stillhaven-heading-muted: #4c625b;
   --stillhaven-ink: #3c3831;
   --stillhaven-accent: #347276;
   --stillhaven-removed: #a63b32;
