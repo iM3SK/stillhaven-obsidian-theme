@@ -5,6 +5,20 @@ User-visible changes are recorded here by release version.
 <!-- Keep a Changelog repeats category headings across releases. -->
 <!-- markdownlint-disable MD024 -->
 
+## [2.1.0] - 2026-11-13
+
+### Added
+
+- Add the `stillhaven-wide` CSS class. Notes that list it in `cssclasses` give
+  code blocks and tables more room in Reading View and widen the editor.
+
+### Changed
+
+- Keep code blocks, tables, Properties, and the editor at Obsidian's readable
+  line width by default, matching the surrounding text.
+- Wrap long text inside table cells instead of widening the table, while code
+  block lines stay unwrapped and scroll horizontally.
+
 ## [2.0.3] - 2026-10-21
 
 ### Changed
@@ -157,6 +171,7 @@ User-visible changes are recorded here by release version.
 
 <!-- markdownlint-enable MD024 -->
 
+[2.1.0]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.3...2.1.0
 [2.0.3]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/iM3SK/stillhaven-obsidian-theme/compare/2.0.0...2.0.1

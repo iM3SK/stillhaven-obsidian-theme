@@ -2,6 +2,8 @@
 tags:
   - stillhaven
   - showcase
+cssclasses:
+  - stillhaven-wide
 status: in-progress
 review-date: 2026-10-10
 reviewed: false
@@ -67,10 +69,10 @@ console.log(outline);
 
 ### More room for tables
 
-| Item | Location | Purpose | Review |
-| --- | --- | --- | --- |
-| Project notes | `notes/projects/field-guide/` | Keep decisions and next actions together | Weekly <!-- markdown-check: nonbinding-resource --> |
-| Reading list | `notes/reference/reading-list.md` | Collect sources with a short explanation of their value | Monthly <!-- markdown-check: nonbinding-resource --> |
+| Item           | Location                                               | Purpose                                                   | Review                                                      |
+| -------------- | ------------------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------- |
+| Project notes  | `notes/projects/field-guide/`                          | Keep decisions and next actions together                  | Weekly <!-- markdown-check: nonbinding-resource -->         |
+| Reading list   | `notes/reference/reading-list.md`                      | Collect sources with a short explanation of their value   | Monthly <!-- markdown-check: nonbinding-resource -->        |
 | Working drafts | `notes/drafts/a-long-and-descriptive-document-name.md` | Give a longer path and a detailed description enough room | Before sharing <!-- markdown-check: nonbinding-resource --> |
 
 ## Embedded context

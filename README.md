@@ -80,7 +80,7 @@ The command palette keeps selections visible in both color modes.
 | Detail | What it brings |
 | --- | --- |
 | Typography | Your Obsidian fonts, with comfortable spacing for prose, code, and tables; Geist and Geist Mono are optional recommendations. |
-| Tables and code | Compact, rounded surfaces in neutral colors, clearer inline code, and a separate copy toolbar above rendered code blocks. |
+| Tables and code | Compact, rounded surfaces in neutral colors, clearer inline code, wrapped table text, and a separate copy toolbar above rendered code blocks. |
 | Navigation | Built-in folder and file icons, a slim active-file marker, and clear search and command selections. Icons stay hidden while renaming. |
 | Structure | A quiet Properties panel, a thin rule under H2, quieter H3 headings, and compact, softly tinted callouts with a slim accent edge. |
 | Tasks | Centered vector symbols for incomplete `[/]`, important `[!]`, and canceled `[-]` items in Reading View and Live Preview, independent of your font. |
@@ -156,10 +156,26 @@ Callouts and note embeds share compact padding, paragraph spacing, and line
 height. Embedded headings use smaller sizes to keep excerpts close to the
 surrounding note.
 
+## Wider notes
+
+With **Readable line length** enabled, Stillhaven keeps text, code blocks,
+tables, and the editor at the same comfortable width. For a note with wide
+tables or long code, add the `stillhaven-wide` class to its Properties:
+
+```yaml
+cssclasses:
+  - stillhaven-wide
+```
+
+In Reading View, paragraphs keep the readable width while code blocks and
+tables can use up to `1080px`. The editor uses the same wider measure for the
+whole note.
+
 ## Sample note
 
 [Showcase.md](Showcase.md) is a synthetic sample note for previewing Properties,
 task states, note embeds, image galleries, typography, tables, code, and callouts.
+It uses the `stillhaven-wide` class to show wider code and tables.
 Copy it into your vault together with
 [appearance-dark.png](screenshots/appearance-dark.png) and
 [appearance-light.png](screenshots/appearance-light.png), keeping both images
