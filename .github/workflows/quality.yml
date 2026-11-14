@@ -30,8 +30,8 @@ jobs:
 
       - name: Install pinned checkers
         # Every package, including transitive ones, is pinned with an
-        # integrity hash in .github/quality/package-lock.json.
-        run: npm ci --prefix .github/quality --ignore-scripts --no-audit --no-fund
+        # integrity hash in ci/package-lock.json.
+        run: npm ci --prefix ci --ignore-scripts --no-audit --no-fund
 
       - name: Validate theme manifest and MIT notice
         run: |
@@ -72,7 +72,7 @@ jobs:
           import { createRequire } from 'node:module';
           import { join } from 'node:path';
 
-          const require = createRequire(join(process.cwd(), '.github', 'quality', 'package.json'));
+          const require = createRequire(join(process.cwd(), 'ci', 'package.json'));
           const postcss = require('postcss');
           const css = readFileSync('theme.css', 'utf8');
           const root = postcss.parse(css);
@@ -122,7 +122,7 @@ jobs:
           };
           writeFileSync(join(process.env.RUNNER_TEMP, 'stillhaven-stylelint.json'), JSON.stringify(config));
           NODE
-          node .github/quality/node_modules/stylelint/bin/stylelint.mjs \
+          node ci/node_modules/stylelint/bin/stylelint.mjs \
             --config "$RUNNER_TEMP/stillhaven-stylelint.json" --max-warnings 0 theme.css
 
       - name: Check Markdown
@@ -136,5 +136,5 @@ jobs:
           };
           writeFileSync(join(process.env.RUNNER_TEMP, 'stillhaven-markdownlint.json'), JSON.stringify(config));
           NODE
-          node .github/quality/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs \
+          node ci/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs \
             --config "$RUNNER_TEMP/stillhaven-markdownlint.json" README.md CHANGELOG.md Showcase.md
