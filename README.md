@@ -8,7 +8,7 @@ for writing, navigating, and connecting ideas.
 
 [![Release](https://img.shields.io/github/v/release/iM3SK/stillhaven-obsidian-theme)](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
 [![Obsidian 1.13.0+](https://img.shields.io/badge/Obsidian-1.13.0%2B-7C3AED)](manifest.json)
-[![Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml/badge.svg?branch=master&event=push)](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
+[![Code quality](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml/badge.svg?branch=main&event=push)](https://github.com/iM3SK/stillhaven-obsidian-theme/actions/workflows/quality.yml)
 [![MIT License](https://img.shields.io/github/license/iM3SK/stillhaven-obsidian-theme)](LICENSE)
 
 [Download the latest release](https://github.com/iM3SK/stillhaven-obsidian-theme/releases/latest)
