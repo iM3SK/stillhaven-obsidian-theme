@@ -3,7 +3,7 @@
   "private": true,
   "description": "Pinned checkers for the Code quality workflow; not part of the theme.",
   "dependencies": {
-    "markdownlint-cli2": "0.23.3",
+    "markdownlint-cli2": "0.24.0",
     "stylelint": "17.14.1"
   }
 }
